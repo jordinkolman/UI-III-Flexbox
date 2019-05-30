@@ -1,89 +1,20 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -91,38 +22,31 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: flex;
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
 }
+
 body {
   line-height: 1;
 }
-ol,
-ul {
+
+ol, ul {
   list-style: none;
 }
-blockquote,
-q {
+
+blockquote, q {
   quotes: none;
 }
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -133,236 +57,163 @@ table {
   box-sizing: border-box;
 }
 
-html,
-body {
+html, body {
   height: 100%;
-  font-family: "Titillium Web", sans-serif;
+  font-family: 'Titillium Web', sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: "Bangers", cursive;
+h1, h2, h3, h4, h5 {
+  font-family: 'Bangers', cursive;
   letter-spacing: 1px;
   margin-bottom: 15px;
 }
 
-/* Your code starts here! */
+section {
+  position: relative;
+}
 
-/* font-family: "Anton", sans-serif; */
+h1 {
+  font-size: 60px;
+}
 
-.static-navbar {
-  display: flex;
-  justify-content: space-evenly;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: lightgrey;
-  z-index: 5;
-  text-align: left;
+.container {
+  margin: 0 auto;
+  width: 900px;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
-  height: 100px;
+  align-items: center;
+  width: 100%;
   margin: 0 auto;
+  margin-top: 20px;
 }
 
-nav a {
+.menu a {
+  color: #777;
   text-decoration: none;
-  color: black;
-  margin: 35px 31px 0 31px;
-  font-size: 14px;
+  padding-right: 40px;
+}
+
+.hero {
   display: flex;
-}
-
-nav a:hover {
-  color: rgb(176, 177, 178);
-}
-
-nav a:first-child {
-  margin-left: 0;
-}
-
-nav div {
-  display: flex;
-  position: absolute;
-  right: 0;
-}
-
-img {
-  margin-top: 25px;
-}
-
-.website-wrapper {
-  width: 880px;
-  margin: 130px auto 0 auto;
-  z-index: 1;
-}
-
-header {
-  border-bottom: 1px solid black;
-  position: relative;
-  height: 490px;
-}
-
-header div {
-  display: flex;
-  flex-direction: column;
+  margin: 0 auto;
+  border-bottom: 2px solid #c9c9c9;
   text-align: center;
-  margin: 70px 0 0 85px;
+  justify-content: space-around;
+  align-items: center;
 }
 
-header div h1 {
-  font-size: 80px;
-  margin-bottom: 30px;
+.hero p {
+  text-align: center;
 }
 
-header div h1 span {
+.cta {
+  width: 140px;
+  margin: 0 auto;
+  border: 2px solid #c9c9c9;
+  padding: 10px 26px;
+}
+
+.hero img {
+  max-width: 300px;
+  margin: 40px 0;
+}
+
+.inner1 {
+  max-width: 50%;
+}
+
+.top-row {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
-header div a {
-  text-decoration: none;
-  color: black;
-  border: 1px solid black;
-  padding: 4px 48px;
-}
-
-header img {
+.bottom-row {
   display: flex;
-  position: absolute;
-  right: 0;
+  justify-content: space-between;
 }
 
-.section-one {
-  margin-top: 39px;
+.inner2 {
+  max-width: 30%;
 }
 
-.section-one div {
-  width: 430px;
-  height: 100px;
-  display: flex;
-  flex-direction: column;
-}
-
-.section-one div p {
-  line-height: 1.16;
-}
-
-.section-one div:first-child {
-  margin-right: 10px;
+.inner1 h2 {
+  margin-top: 20px;
 }
 
 .middle-img {
-  margin-top: 38px;
+  margin: 40px 0;
 }
 
-.section-two {
-  border-bottom: 1px solid black;
-  margin-top: 36px;
-  padding-bottom: 47px;
-}
-
-.section-two div {
-  display: flex;
-  flex-direction: column;
-  width: 280px;
-  margin-right: 10px;
-}
-
-.section-two div p {
-  line-height: 1.16;
+.bottom-row {
+  padding-bottom: 40px;
+  border-bottom: 2px solid #c9c9c9;
 }
 
 address {
-  margin-top: 38px;
+  margin-top: 40px;
 }
 
-address div {
-  line-height: 1.16;
+.phone {
+  padding: 20px 0;
 }
 
-address div span {
-  display: flex;
-  margin: 17px 0 18px 0;
+.copyright {
+  text-align: center;
+  margin: 80px 0;
 }
 
-footer {
-  width: 100%;
-  height: 183px;
-  display: flex;
-  justify-content: center;
-}
-
-footer p {
-  margin-top: 54px;
-  font-size: 14px;
-}
-.serviceHeader {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  margin: 100px 40px 0 40px;
-  border-bottom: 1px solid black;
-}
-
-.headerText {
-  position: relative;
+/* Services Page-specific CSS */
+.services-header {
+	display: flex;
+	flex-direction: column;
   margin: 20px 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  order: 2;
+	padding-bottom: 30px;
+  border-bottom: 1px solid #c9c9c9;
 }
-.service-container {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  height: 1000px;
-  border-bottom: 1px solid black;
+
+.services-header h1 {
+	font-size: 28px;
+	padding-top: 20px;
 }
-.service {
-  margin: 20px;
+
+.desc-section {
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-around;
-  background: lightgrey;
-  border: 1px solid black;
-  flex-basis: 500px;
-  height: 250px;
-  width: 500px;
+  justify-content: space-between;
+	padding-bottom: 20px;
+  border-bottom: 1px solid #c9c9c9;
 }
-.service-facts {
-  display: flex;
-  flex-flow: row nowrap;
-  margin: 40px;
+
+.service-desc {
+  max-width: 48%;
+  background-color: #F4F3F4;
+  border: 1px solid #c9c9c9;
+  padding: 20px;
+  margin: 20px 0;
 }
-.serviceFooter {
-  display: flex;
-  flex-direction: column;
-  margin: 40px;
-  justify-content: space-evenly;
+
+.service-desc h2 {
+font-size: 20px;
 }
+
 button {
-  max-width: 100px;
-  border-color: black;
-  background-color: white;
+  display: block;
+  margin-top: 15px;
+  padding: 8px 15px;
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
 }
-ul {
-  list-style-type: disc;
-  margin: 0 20px;
+
+.services-bottom-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-top: 40px;
 }
-.copyright-line {
-  width: 100%;
-  height: 183px;
-  display: flex;
-  justify-content: center;
+
+.services-bottom-row p {
+	padding-bottom: 20px;
 }
